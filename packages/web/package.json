@@ -1,0 +1,33 @@
+{
+  "name": "cesium-car-simulator",
+  "private": false,
+  "version": "1.0.0",
+  "description": "100% Open Source Car Simulator - Drive anywhere in the world using Cesium + OpenStreetMap",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noUnusedLocals false && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0",
+    "vite-plugin-static-copy": "^3.1.2"
+  },
+  "dependencies": {
+    "@types/node": "^22.14.0",
+    "cesium": "^1.133.0",
+    "clsx": "^2.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.5.5"
+  },
+  "keywords": ["cesium", "car-simulator", "openstreetmap", "3d", "driving", "open-source"],
+  "license": "MIT"
+}
