@@ -178,8 +178,8 @@ export class GameBridge extends TypedEventEmitter<GameEvents> {
     const vehicle = this.game.getVehicleManager().getActiveVehicle();
     if (vehicle && vehicle instanceof Aircraft && vehicle.isCrashed()) {
       vehicle.resetCrash();
-      // Reset to spawn position (Puerta del Sol, Madrid)
-      const spawnPosition = Cesium.Cartesian3.fromDegrees(-3.7038, 40.4168, 1000);
+      // Reset to spawn position (Plaza Catalunya, Barcelona)
+      const spawnPosition = Cesium.Cartesian3.fromDegrees(2.1700, 41.3870, 300);
       const currentState = vehicle.getState();
       vehicle.setState({
         ...currentState,

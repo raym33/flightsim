@@ -5,10 +5,10 @@ import { Scene } from '../core/Scene';
 import { Updatable } from '../core/GameLoop';
 import { InputManager } from '../input/InputManager';
 
-// Default spawn: Puerta del Sol, Madrid
+// Default spawn: Plaza Catalunya, Barcelona
 const DEFAULT_SPAWN_LOCATION = {
-  lng: -3.7038,
-  lat: 40.4168
+  lng: 2.1700,
+  lat: 41.3870
 };
 
 export class VehicleManager implements Updatable {
@@ -141,7 +141,7 @@ export class VehicleManager implements Updatable {
     const spawnPosition = position || Cesium.Cartesian3.fromDegrees(
       DEFAULT_SPAWN_LOCATION.lng,
       DEFAULT_SPAWN_LOCATION.lat,
-      1000  // Spawn at 1000m altitude for flying (Madrid is at ~650m elevation)
+      300  // Spawn at 300m altitude for flying
     );
 
     const aircraft = new Aircraft(id, {
@@ -160,7 +160,7 @@ export class VehicleManager implements Updatable {
     const originalSpawn = Cesium.Cartesian3.fromDegrees(
       DEFAULT_SPAWN_LOCATION.lng,
       DEFAULT_SPAWN_LOCATION.lat,
-      1000
+      300
     );
     await this.spawnAircraft('aircraft', originalSpawn, 0);
   }
