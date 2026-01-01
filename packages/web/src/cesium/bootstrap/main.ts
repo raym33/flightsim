@@ -93,8 +93,8 @@ export class CesiumVehicleGame {
   }
 
   public async startCinematicSequence(): Promise<void> {
-    // Start in Puerta del Sol, Madrid at 300m altitude
-    const spawnPosition = Cesium.Cartesian3.fromDegrees(-3.7038, 40.4168, 300);
+    // Start in Puerta del Sol, Madrid at 1000m altitude (Madrid is at ~650m elevation)
+    const spawnPosition = Cesium.Cartesian3.fromDegrees(-3.7038, 40.4168, 1000);
 
     console.log('🎬 Starting cinematic sequence...');
 

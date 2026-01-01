@@ -141,7 +141,7 @@ export class VehicleManager implements Updatable {
     const spawnPosition = position || Cesium.Cartesian3.fromDegrees(
       DEFAULT_SPAWN_LOCATION.lng,
       DEFAULT_SPAWN_LOCATION.lat,
-      300  // Spawn at 300m altitude for flying
+      1000  // Spawn at 1000m altitude for flying (Madrid is at ~650m elevation)
     );
 
     const aircraft = new Aircraft(id, {
@@ -160,7 +160,7 @@ export class VehicleManager implements Updatable {
     const originalSpawn = Cesium.Cartesian3.fromDegrees(
       DEFAULT_SPAWN_LOCATION.lng,
       DEFAULT_SPAWN_LOCATION.lat,
-      300
+      1000
     );
     await this.spawnAircraft('aircraft', originalSpawn, 0);
   }
